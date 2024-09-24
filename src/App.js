@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import ChatBox from './components/ChatBox';
+import Header from './components/Header'; // Import the new Header component
 import './App.css';
 
-function App() {
+import { PrimeReactProvider } from 'primereact/api';
+
+const App = () => {
+  const [messages, setMessages] = useState([]);
+
+  const handleSend = (message) => {
+    setMessages([...messages, { sender: 'User', text: message }]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PrimeReactProvider>
+      <div className="app-container">
+        <Header /> {/* Use the Header component here */}
+        <div className="main-content">
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+          <div className="chat-container">
+            <ChatBox messages={messages} onSend={handleSend} />
+          </div>
+        </div>
+      </div>
+    </PrimeReactProvider>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,18 @@
+/* Header.css */
+.header {
+    background-color: black; /* Set background color to black */
+    padding: 10px 0; /* Add some padding to the header */
+  }
+  
+  .header .p-menubar {
+    background-color: black; /* Ensure the menubar also remains black */
+  }
+  
+  .header .p-menubar .p-menuitem-link {
+    color: white; /* Set the text color to white */
+  }
+  
+  .header .p-menubar .p-menuitem-link:hover {
+    background-color: #333; /* Darker hover effect */
+  }
+  

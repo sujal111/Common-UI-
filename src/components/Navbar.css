@@ -1,0 +1,49 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    background-color: black; /* Navbar background color */
+    padding: 0; /* Remove padding to align to edges */
+    margin: 0; /* Ensure no margin */
+    max-width: 100%; /* Ensure full width */
+    position: relative; /* Position relative to manage absolute children */
+  }
+  
+  .navbar-logo {
+    display: flex; /* Ensure flex behavior */
+    align-items: center; /* Center the logo vertically */
+    margin: 0; /* No margin */
+  }
+  
+  .navbar-logo img {
+    width: 70px; /* Increase logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and name */
+  }
+  
+  .logo-name {
+    color: white; /* Text color for AT&T name */
+    font-size: 1.5rem; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px; /* Space between the links */
+    margin-left: auto; /* Push links to the right */
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  .navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-links li a:hover {
+    color: #ccc; /* Change color on hover */
+  }
+  
